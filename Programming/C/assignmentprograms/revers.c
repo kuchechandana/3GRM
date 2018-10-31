@@ -1,0 +1,30 @@
+#include<stdio.h>
+main()
+{
+	int i,num,j;
+	printf("enter num");
+	scanf("%d",&num);
+	for(i=31;i>=0;i--)
+	{
+		if(num>>i&1)
+			printf("1");
+		else
+			printf("0");
+	}
+	for(i=0,j=31;i<j;j--,i++)
+	{
+		if((num>>i&1)!=(num>>j&1))
+		{
+			num=num^(1<<i);
+			num=num^(1<<j);
+		}
+	}
+	printf("\n");
+	for(i=31;i>=0;i--)
+	{
+		if(num>>i&1)
+			printf("1");
+		else
+			printf("0");
+	}
+}
