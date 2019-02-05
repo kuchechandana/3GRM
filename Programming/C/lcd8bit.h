@@ -1,4 +1,5 @@
-//lcd8bit.h
+//B
+//lcd10bit.h//lcd9bit.h
 
 sfr  LCD = 0x80;
 sbit RS = P3^4;
@@ -98,5 +99,4 @@ num=num/10;
 
 while(--i>=0)
 lcd_data(a[i]);
-
 }
